@@ -51,7 +51,7 @@ As default, **scans are scheduled to run at 12 AM on daily basis**, you can upda
 
 ## Config
 
-You can configure keys for sources to use in subfinder in `config/subfinder-config.yaml` to get additional results, also `config/bug-tracker-config.yaml` to make use of nuclei bug reporting module, for [more details](https://nuclei.projectdiscovery.io/nuclei/get-started/#nuclei-reporting).
+You can configure keys for sources to use in subfinder in `config/subfinder-config.yaml` to get additional results, also `config/bug-tracker-config.yaml` to make use of nuclei bug reporting module, for [more details](https://nuclei.projectdiscovery.io/nuclei/get-started.html#nuclei-reporting).
 
 To send output from any project directly to **Slack, Discord, Telegram**, add/update notify flags in the `.github/workflows/pd-actions.yaml` file accordingly.
 
