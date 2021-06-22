@@ -29,20 +29,9 @@
 
 - Update `input/domains.txt` with the target of your interest.
 - Make required changes in `.github/workflows/pd-actions.yaml`
-- Now you will be able to see the "pd-actions" under Actions tab in your repository. 
+- Now you will be able to see the "pd-actions" under Actions tab in your repository.
 
-For running continuous periodic scan, remove the below comments form your actions file.
-
-```yaml
-name: 💥 PD Actions
-
-on:
-    schedule:
-      - cron: '0 0 * * *'
-    workflow_dispatch:
-```
-
-As default, **scans are scheduled to run at 12 AM on daily basis**, you can update schedule and flag values of various tools as per your need in <ins>.github/workflows/pd-actions.yaml</ins> file on your forked version.
+As default, **Action is scheduled to run at 12 AM on daily basis**, you can update cron schedule and flag values of various tools as per your need in <ins>.github/workflows/pd-actions.yaml</ins> file on your forked version.
 
 
 <table>
