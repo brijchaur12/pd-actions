@@ -34,11 +34,11 @@
 For running continuous periodic scan, remove the below comments form your actions file.
 
 ```yaml
-name: pd-actions
+name: 💥 PD Actions
 
 on:
-#    schedule:
-#      - cron: '0 0 * * *'
+    schedule:
+      - cron: '0 0 * * *'
     workflow_dispatch:
 ```
 
