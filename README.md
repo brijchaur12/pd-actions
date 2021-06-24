@@ -29,20 +29,9 @@
 
 - Update `input/domains.txt` with the target of your interest.
 - Make required changes in `.github/workflows/pd-actions.yaml`
-- Now you will be able to see the "pd-actions" under Actions tab in your repository. 
+- Now you will be able to see the "pd-actions" under Actions tab in your repository.
 
-For running continuous periodic scan, remove the below comments form your actions file.
-
-```yaml
-name: pd-actions
-
-on:
-#    schedule:
-#      - cron: '0 0 * * *'
-    workflow_dispatch:
-```
-
-As default, **scans are scheduled to run at 12 AM on daily basis**, you can update schedule and flag values of various tools as per your need in <ins>.github/workflows/pd-actions.yaml</ins> file on your forked version.
+As default, **Action is scheduled to run at 12 AM on daily basis**, you can update cron schedule and flag values of various tools as per your need in <ins>.github/workflows/pd-actions.yaml</ins> file on your forked version.
 
 
 <table>
@@ -51,7 +40,7 @@ As default, **scans are scheduled to run at 12 AM on daily basis**, you can upda
 
 ## Config
 
-You can configure keys for sources to use in subfinder in `config/subfinder-config.yaml` to get additional results, also `config/bug-tracker-config.yaml` to make use of nuclei bug reporting module, for [more details](https://nuclei.projectdiscovery.io/nuclei/get-started/#nuclei-reporting).
+You can configure keys for sources to use in subfinder in `config/subfinder-config.yaml` to get additional results, also `config/bug-tracker-config.yaml` to make use of nuclei bug reporting module, for [more details](https://nuclei.projectdiscovery.io/nuclei/get-started.html#nuclei-reporting).
 
 To send output from any project directly to **Slack, Discord, Telegram**, add/update notify flags in the `.github/workflows/pd-actions.yaml` file accordingly.
 
