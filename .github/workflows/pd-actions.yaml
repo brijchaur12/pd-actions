@@ -17,9 +17,6 @@ jobs:
         with:
           go-version: 1.15
 
-      - name: Setup Dependencies
-        run: sudo apt-get install libpcap-dev # Required for Naabu
-
       - name: Cache Go
         id: cache-go
         uses: actions/cache@v2
@@ -32,7 +29,6 @@ jobs:
         env:
           GO111MODULE: on
         run: |
-          go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
           go get -v github.com/projectdiscovery/notify/cmd/notify
 #          go get -v github.com/projectdiscovery/cloudlist/cmd/cloudlist
         shell: bash
@@ -50,10 +46,13 @@ jobs:
           list: output/passive_subdomains.txt
           output: output/active_subdomains.txt
 
-      - name: Running naabu to check top 100 ports
-        run: |
-          naabu -iL output/active_subdomains.txt  -rate 10000 -top-ports 100 | tee output/active_ports.txt
-        shell: bash
+
+      - name: 💥 Naabu - Port Scanner
+        uses: projectdiscovery/naabu-action@main
+        with:
+          list: output/active_subdomains.txt
+          output: output/active_ports.txt
+          rate: "10000"
 
 #      For running vulnerability assessment of cloud assets.
 #      - name: Enumerating hosts from Cloud with Cloudlist
