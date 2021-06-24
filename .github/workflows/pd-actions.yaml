@@ -32,9 +32,7 @@ jobs:
         env:
           GO111MODULE: on
         run: |
-          go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
           go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
-          go get -v github.com/projectdiscovery/httpx/cmd/httpx
           go get -v github.com/projectdiscovery/notify/cmd/notify
 #          go get -v github.com/projectdiscovery/cloudlist/cmd/cloudlist
         shell: bash
@@ -43,13 +41,14 @@ jobs:
         uses: projectdiscovery/subfinder-action@main
         with:
           list: input/domains.txt
-          config: config/subfinder-config.yaml
           output: output/passive_subdomains.txt
+          config: config/subfinder-config.yaml
 
-      - name: Running dnsx for valid DNS filtering 
-        run: |
-          dnsx -l output/passive_subdomains.txt -t 50 | tee output/active_subdomains.txt
-        shell: bash
+      - name: 💥 dnsx - DNS Resolver
+        uses: projectdiscovery/dnsx-action@main
+        with:
+          list: output/passive_subdomains.txt
+          output: output/active_subdomains.txt
 
       - name: Running naabu to check top 100 ports
         run: |
