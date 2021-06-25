@@ -15,10 +15,7 @@ jobs:
       - name: Setup golang
         uses: actions/setup-go@v2
         with:
-          go-version: 1.14
-
-      - name: Setup Dependencies
-        run: sudo apt-get install libpcap-dev # Required for Naabu
+          go-version: 1.15
 
       - name: Cache Go
         id: cache-go
@@ -32,29 +29,30 @@ jobs:
         env:
           GO111MODULE: on
         run: |
-          go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
-          go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
-          go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
-          go get -v github.com/projectdiscovery/httpx/cmd/httpx
-          go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
           go get -v github.com/projectdiscovery/notify/cmd/notify
 #          go get -v github.com/projectdiscovery/cloudlist/cmd/cloudlist
         shell: bash
 
-      - name: Running SubFinder for passive DNS enumeration
-        run: |
-          subfinder -dL input/domains.txt -config config/subfinder-config.yaml -o output/passive_subdomains.txt
-        shell: bash
+      - name: 🔎 SubFinder - DNS Enumeration
+        uses: projectdiscovery/subfinder-action@main
+        with:
+          list: input/domains.txt
+          output: output/passive_subdomains.txt
+          config: config/subfinder-config.yaml
 
-      - name: Running dnsx for valid DNS filtering 
-        run: |
-          dnsx -l output/passive_subdomains.txt -t 50 | tee output/active_subdomains.txt
-        shell: bash
+      - name: 💥 dnsx - DNS Resolver
+        uses: projectdiscovery/dnsx-action@main
+        with:
+          list: output/passive_subdomains.txt
+          output: output/active_subdomains.txt
 
-      - name: Running naabu to check top 100 ports
-        run: |
-          naabu -iL output/active_subdomains.txt  -rate 10000 -top-ports 100 | tee output/active_ports.txt
-        shell: bash
+
+      - name: 💥 Naabu - Port Scanner
+        uses: projectdiscovery/naabu-action@main
+        with:
+          list: output/active_subdomains.txt
+          output: output/active_ports.txt
+          rate: "10000"
 
 #      For running vulnerability assessment of cloud assets.
 #      - name: Enumerating hosts from Cloud with Cloudlist
@@ -62,12 +60,13 @@ jobs:
 #          cloudlist -config config/cloudlist-config.yaml -ip | tee output/cloud_hosts.txt >> output/active_ports.txt
 #        shell: bash
 
-      - name: Running httpx for HTTP webservers probbing
-        run: |
-          httpx -l output/active_ports.txt | tee output/active_urls.txt
-        shell: bash
+      - name: httpx - HTTP Web Server probing
+        uses: projectdiscovery/httpx-action@main
+        with:
+          list: output/active_ports.txt
+          output: output/active_urls.txt
 
-      - name: Nuclei Scan
+      - name: Nuclei - DAST Scan
         uses: projectdiscovery/nuclei-action@main
         with:
           urls: output/active_urls.txt
