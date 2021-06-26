@@ -38,10 +38,6 @@ forms.humblebundle.com:8080
 forms.humblebundle.com:8443
 fr.humblebundle.com:443
 fr.humblebundle.com:80
-humblebundle.com:443
-humblebundle.com:80
-humblebundle.com:8080
-humblebundle.com:8443
 i.mailer.humblebundle.com:443
 i.mailer.humblebundle.com:80
 i.mailer.humblebundle.com:8080
