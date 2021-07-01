@@ -6,6 +6,7 @@ careers.humblebundle.com
 cdn.humblebundle.com
 cloudfront.humblebundle.com
 cn.humblebundle.com
+crj.192.168.0.1
 d.mailer.humblebundle.com
 de.humblebundle.com
 developer.humblebundle.com
@@ -40,6 +41,7 @@ try.humblebundle.com
 upload.humblebundle.com
 url3645.humblebundle.com
 url5770.humblebundle.com
+www.192.168.0.1
 www.blog.humblebundle.com
 www.humblebundle.com
 www.jobs.humblebundle.com
