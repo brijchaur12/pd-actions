@@ -20,6 +20,8 @@ http://files.humblebundle.com
 http://forms.humblebundle.com
 http://forms.humblebundle.com:8080
 http://fr.humblebundle.com
+http://humblebundle.com
+http://humblebundle.com:8080
 http://i.mailer.humblebundle.com
 http://i.mailer.humblebundle.com:8080
 http://i.mailer.humblebundle.com:8443
@@ -60,6 +62,8 @@ https://files.humblebundle.com
 https://forms.humblebundle.com
 https://forms.humblebundle.com:8443
 https://fr.humblebundle.com
+https://humblebundle.com
+https://humblebundle.com:8443
 https://i.mailer.humblebundle.com
 https://it.humblebundle.com
 https://jenkins.humblebundle.com
