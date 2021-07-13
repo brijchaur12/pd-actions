@@ -1,5 +1,6 @@
 1.hackerrank.com
 2x.mobile.staging.snooguts.net
+accountapi.oneplus.in
 accounts.dev.snooguts.net
 actorvpn.verodin.snooguts.net
 admin-backend.dev.snooguts.net
@@ -41,6 +42,7 @@ cdn.humblebundle.com
 che-plugin-registry-prod.projects.hackerrank.com
 che-plugin-registry-service.rba.hackerrank.com
 che-rba.usa.hackerrank.com
+cloud.oneplus.in
 cloudfront.humblebundle.com
 cn.humblebundle.com
 codeload.github.snooguts.net
@@ -73,6 +75,7 @@ email.hackerrank.com
 email.humblebundle.com
 email.mailer.hackerrank.com
 email.postmaster.hackerrank.com
+engineer.oneplus.in
 engineering.hackerrank.com
 es.humblebundle.com
 experiments.dev.snooguts.net
@@ -138,6 +141,9 @@ k8s.hackerrank.com
 keycloak-rba.usa.hackerrank.com
 kubernetes.reddit.ue1.snooguts.net
 kubernetes.ue1.snooguts.net
+levin.oneplus.in
+levinapi.oneplus.in
+link.oneplus.in
 logdna.ue1.snooguts.net
 looker.hackerrank.com
 lsp-aws.hackerrank.com
@@ -148,6 +154,7 @@ mail1.humblebundle.com
 mail3.humblebundle.com
 mailer.humblebundle.com
 main.hackerrank.com
+mallapi.oneplus.in
 marketing.hackerrank.com
 marketingstaging.hackerrank.com
 mask.hackerrank.com
@@ -169,6 +176,7 @@ notifications.hackerrank.com
 notifications2.hackerrank.com
 notify.hackerrank.com
 oldblog.hackerrank.com
+oneplus.in
 opafstand.hackerrank.com
 orch.ue1.snooguts.net
 origin-cdn.hackerrank.com
@@ -178,7 +186,10 @@ pages.github.snooguts.net
 pages.hackerrank.com
 pair.hackerrank.com
 pandemicflu.hackerrank.com
+pay.oneplus.in
+payapi.oneplus.in
 preprod.snooguts.net
+preview.corp.oneplus.in
 pritunl-user.test.ue1.snooguts.net
 pritunl-vpn-test.zerotrust.ue1.snooguts.net
 pritunl-vpn.test.ue1.snooguts.net
@@ -203,6 +214,7 @@ renewaltest1.snooguts.net
 research-new.hackerrank.com
 research.hackerrank.com
 respiratory.hackerrank.com
+reviewapi.oneplus.in
 reviews.humblebundle.com
 rfmaska.hackerrank.com
 riccardocoronati.hackerrank.com
@@ -220,6 +232,7 @@ servergmj6x8t7-dev-machine-server-4401.usc.hackerrank.com
 servergmj6x8t7-dev-machine-server-4411.usc.hackerrank.com
 serverqz0veuf0-dev-machine-server-4401.mb.hackerrank.com
 serversp8n4jlq-hackerrank-rba-plugin-server-4200.use.hackerrank.com
+servifyuat.oneplus.in
 sfbay.hackerrank.com
 sideeye.snooguts.net
 smtp.hackerrank.com
@@ -236,10 +249,13 @@ staging-media.snooguts.net
 staging.snooguts.net
 static.hackerrank.com
 status.hackerrank.com
+storeapi.oneplus.in
 streaming-api-external.kubernetes.ue1.snooguts.net
 suggest.hackerrank.com
 support.hackerrank.com
 support.humblebundle.com
+support.oneplus.in
+supportapi.oneplus.in
 sync.hackerrank.com
 t.mailer.humblebundle.com
 tableau.snooguts.net
@@ -252,6 +268,7 @@ torrents.humblebundle.com
 tracker.humblebundle.com
 try.humblebundle.com
 tsm.tableau.snooguts.net
+unlock.oneplus.in
 updates.hackerrank.com
 upload.humblebundle.com
 uploads.github.snooguts.net
@@ -280,6 +297,7 @@ vault.specproj.ue1.snooguts.net
 vault.test.ue1.snooguts.net
 virus.hackerrank.com
 viruses.hackerrank.com
+vodapi.oneplus.in
 vouch.test.ue1.snooguts.net
 vpc.hackerrank.com
 vpn.snooguts.net
@@ -303,6 +321,7 @@ www.hackerrank.com
 www.humblebundle.com
 www.info.hackerrank.com
 www.jobs.humblebundle.com
+www.oneplus.in
 www.research.hackerrank.com
 www.try.humblebundle.com
 www.vault.ads.ue1.snooguts.net
