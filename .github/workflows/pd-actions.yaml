@@ -30,7 +30,7 @@ jobs:
       - name: Setting up ProjectDiscovery tools
         if: steps.cache-go.outputs.cache-hit != 'true'
         env:
-          GO111MODULE: off
+          GO111MODULE: on
         run: |
           go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go get -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
